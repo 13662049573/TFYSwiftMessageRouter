@@ -60,7 +60,7 @@ class ViewController: UIViewController {
         
         if let action4 = TFYRouterManager.default.routeTo("TFYSwiftMessageRouter.LoginActionTest4(a: Swift.Int) -> Swift.Int", routerSILFunctionType: (@convention(thin) (Int)->Int).self) {
             let result = action4(4)
-            print(result)
+            Log(result)
         }
         
         if let action5 = TFYRouterManager.default.routeTo("TFYSwiftMessageRouter.LoginActionTest5(a: Swift.Int, _: __C.CGRect) -> ()", routerSILFunctionType: (@convention(thin) (Int, CGRect)->()).self) {
