@@ -11,14 +11,14 @@ Pod::Spec.new do |spec|
   汇编代码的路由跳转，支持OC 于 Swift 各个界面跳转，方法跳转 数据传输,最低支持ios 13 Swift 5 
                    DESC
 
-  spec.homepage     = "http://EXAMPLE/TFYSwiftRouter"
+  spec.homepage     = "https://github.com/13662049573/TFYSwiftMessageRouter"
   
   spec.license      = "MIT"
   
-  spec.author             = { "田风有" => "420144542@qq.com" }
+  spec.author       = { "田风有" => "420144542@qq.com" }
 
 
-  spec.source       = { :git => "http://EXAMPLE/TFYSwiftRouter.git", :tag => spec.version }
+  spec.source       = { :git => "https://github.com/13662049573/TFYSwiftMessageRouter.git", :tag => spec.version }
 
 
   spec.source_files  = "TFYSwiftMessageRouter/TFYSwiftRouter/**/*.{swift}"
