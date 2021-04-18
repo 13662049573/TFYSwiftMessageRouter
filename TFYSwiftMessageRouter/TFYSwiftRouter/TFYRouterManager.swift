@@ -22,6 +22,7 @@ public extension TFYRouterManager {
 }
 
 public extension TFYRouterManager {
+    
     func routeTo(_ router: String) -> TFYRouterDefaultSILFunction? {
         let function = self.routeTo(router, routerSILFunctionType: TFYRouterDefaultSILFunction.TFYRouterSILFunction.self)
         return TFYRouterDefaultSILFunction(function)

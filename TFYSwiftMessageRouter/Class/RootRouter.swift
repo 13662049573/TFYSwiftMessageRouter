@@ -18,11 +18,11 @@ import UIKit
  */
 @_silgen_name("TFYSwiftMessageRouter.root")
 public func RootRouter(with params: [String: Any]) -> [String: Any]? {
-    guard let navi = params["navi"] as? UINavigationController else {
-       return nil
-    }
     let loginController = RootViewController()
-    navi.pushViewController(loginController, animated: true)
+    if let title = params["title"] as? String {
+        loginController._title = title
+    }
+    RootbasicItools.push(loginController, animated: true)
     return nil
 }
 
@@ -72,4 +72,22 @@ public func LoginActionTest6(a: Int, b: CGRect) {
 public func LoginActionTest7(a: Int, b: UIViewController) {
     Log("Hello, LoginActionTest7; inputValue =\(a)------\(b)")
 }
+
+public func LoginActionTest8(a: Int, b: String, c: BaseModel) {
+    print("Hello, LoginActionTest8; inputValue =", a, b, c.name)
+}
+
+@_silgen_name("TFYSwiftMessageRouter.Test9")
+public func LoginActionTest9(a: Int, b: String, _ c: BaseModel) -> BaseModel {
+    print("Hello, LoginActionTest9; inputValue =", a, b, c.name)
+    c.name = "New Name9"
+    return c
+}
+
+public func LoginActionTest10(a: Int, _ b: String, _ c: BaseModel) -> (BaseModel, Double) {
+    print("Hello, LoginActionTest10; inputValue =", a, b, c.name)
+    c.name = "New Name10"
+    return (c, 10.1)
+}
+
 

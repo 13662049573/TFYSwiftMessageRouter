@@ -39,7 +39,7 @@ class ViewController: UIViewController {
     }
     
     @objc func Rootpush() {
-        TFYRouterManager.default.routeTo("TFYSwiftMessageRouter.root")?(navi:self.navigationController as Any,title:"测试数据")
+        TFYRouterManager.default.routeTo("TFYSwiftMessageRouter.root")?(title:"测试数据")
     }
     
     @objc func action() {
@@ -73,6 +73,24 @@ class ViewController: UIViewController {
 
         if let action7 = TFYRouterManager.default.routeTo("TFYSwiftMessageRouter.LoginActionTest7(a: Swift.Int, b: __C.UIViewController) -> ()", routerSILFunctionType: (@convention(thin) (Int, UIViewController)->()).self) {
             action7(7, self)
+        }
+        
+        if let action8 = TFYRouterManager.default.routeTo("TFYSwiftMessageRouter.LoginActionTest8(a: Swift.Int, b: Swift.String, c: TFYSwiftMessageRouter.BaseModel) -> ()", routerSILFunctionType: (@convention(thin) (Int, String, BaseModel)->()).self) {
+            action8(8, "Action8", BaseModel(_name: "Tanner.Jin"))
+        }
+        
+        if let action9 = TFYRouterManager.default.routeTo("TFYSwiftMessageRouter.Test9", routerSILFunctionType: (@convention(thin) (Int, String, BaseModel)->BaseModel).self) {
+            let newModel = action9(9, "Action9", BaseModel(_name: "Tanner.Jin"))
+            print(newModel.name, "\n")
+        }
+        
+        if let action10 = TFYRouterManager.default.routeTo("TFYSwiftMessageRouter.LoginActionTest10(a: Swift.Int, _: Swift.String, _: TFYSwiftMessageRouter.BaseModel) -> (TFYSwiftMessageRouter.BaseModel, Swift.Double)", routerSILFunctionType: (@convention(thin) (Int, String, BaseModel) -> (BaseModel, Double)).self) {
+            let result = action10(10, "Action10", BaseModel(_name: "Tanner.Jin"))
+            let alert = UIAlertController(title: "结果", message: result.0.name, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+            UIViewController.topViewController?.present(alert, animated: true) {
+                print(result.0.name, result.1)
+            }
         }
     }
 }

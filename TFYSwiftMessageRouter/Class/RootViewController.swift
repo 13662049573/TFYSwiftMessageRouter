@@ -7,9 +7,13 @@
 
 import UIKit
 
+public typealias RouteParameter = [String: Any?]
+
 class RootViewController: UIViewController {
 
     var _title: String?
+    
+    var completion: ((String) -> Void)?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +30,7 @@ class RootViewController: UIViewController {
     
     @objc func pop() {
         self.navigationController?.popViewController(animated: true)
+        completion?("Callback from B!")
     }
 
 }
