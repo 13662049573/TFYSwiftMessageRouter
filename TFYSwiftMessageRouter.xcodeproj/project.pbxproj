@@ -7,14 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		36EA1A9C262AFC850003E726 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36EA1A9B262AFC850003E726 /* AppDelegate.swift */; };
-		36EA1A9E262AFC850003E726 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36EA1A9D262AFC850003E726 /* SceneDelegate.swift */; };
-		36EA1AA0262AFC850003E726 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36EA1A9F262AFC850003E726 /* ViewController.swift */; };
 		36EA1AA3262AFC850003E726 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36EA1AA1262AFC850003E726 /* Main.storyboard */; };
 		36EA1AA5262AFC860003E726 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36EA1AA4262AFC860003E726 /* Assets.xcassets */; };
 		36EA1AA8262AFC860003E726 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36EA1AA6262AFC860003E726 /* LaunchScreen.storyboard */; };
 		36EA1AB3262AFC860003E726 /* TFYSwiftMessageRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36EA1AB2262AFC860003E726 /* TFYSwiftMessageRouterTests.swift */; };
 		36EA1ABE262AFC860003E726 /* TFYSwiftMessageRouterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36EA1ABD262AFC860003E726 /* TFYSwiftMessageRouterUITests.swift */; };
+		36EA1AD4262AFD0D0003E726 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36EA1AD0262AFD0D0003E726 /* ViewController.swift */; };
+		36EA1AD5262AFD0D0003E726 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36EA1AD2262AFD0D0003E726 /* AppDelegate.swift */; };
+		36EA1AD6262AFD0D0003E726 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36EA1AD3262AFD0D0003E726 /* SceneDelegate.swift */; };
+		36EA1B94262BB3A40003E726 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36EA1B93262BB3A40003E726 /* RootViewController.swift */; };
+		36EA1B99262BB3B70003E726 /* RootRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36EA1B98262BB3B70003E726 /* RootRouter.swift */; };
+		36EA1BB7262BBCEE0003E726 /* TFYRouterSILFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36EA1BAD262BBCEE0003E726 /* TFYRouterSILFunction.swift */; };
+		36EA1BB8262BBCEE0003E726 /* TFYRouterManager+OC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36EA1BAE262BBCEE0003E726 /* TFYRouterManager+OC.swift */; };
+		36EA1BB9262BBCEE0003E726 /* TFYRouterFindSymbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36EA1BAF262BBCEE0003E726 /* TFYRouterFindSymbol.swift */; };
+		36EA1BBA262BBCEE0003E726 /* TFYRouterLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36EA1BB0262BBCEE0003E726 /* TFYRouterLog.swift */; };
+		36EA1BBB262BBCEE0003E726 /* TFYRouterLock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36EA1BB1262BBCEE0003E726 /* TFYRouterLock.swift */; };
+		36EA1BBC262BBCEE0003E726 /* TFYRouterFunction+OC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36EA1BB2262BBCEE0003E726 /* TFYRouterFunction+OC.swift */; };
+		36EA1BBD262BBCEE0003E726 /* TFYbasicItools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36EA1BB3262BBCEE0003E726 /* TFYbasicItools.swift */; };
+		36EA1BBE262BBCEE0003E726 /* TFYMacros.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36EA1BB4262BBCEE0003E726 /* TFYMacros.swift */; };
+		36EA1BBF262BBCEE0003E726 /* TFYRouterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36EA1BB5262BBCEE0003E726 /* TFYRouterManager.swift */; };
+		36EA1BC0262BBCEE0003E726 /* TFYRouterHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36EA1BB6262BBCEE0003E726 /* TFYRouterHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,9 +48,6 @@
 
 /* Begin PBXFileReference section */
 		36EA1A98262AFC850003E726 /* TFYSwiftMessageRouter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TFYSwiftMessageRouter.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		36EA1A9B262AFC850003E726 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		36EA1A9D262AFC850003E726 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		36EA1A9F262AFC850003E726 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		36EA1AA2262AFC850003E726 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		36EA1AA4262AFC860003E726 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		36EA1AA7262AFC860003E726 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +58,21 @@
 		36EA1AB9262AFC860003E726 /* TFYSwiftMessageRouterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TFYSwiftMessageRouterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		36EA1ABD262AFC860003E726 /* TFYSwiftMessageRouterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TFYSwiftMessageRouterUITests.swift; sourceTree = "<group>"; };
 		36EA1ABF262AFC860003E726 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		36EA1AD0262AFD0D0003E726 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		36EA1AD2262AFD0D0003E726 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		36EA1AD3262AFD0D0003E726 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		36EA1B93262BB3A40003E726 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		36EA1B98262BB3B70003E726 /* RootRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootRouter.swift; sourceTree = "<group>"; };
+		36EA1BAD262BBCEE0003E726 /* TFYRouterSILFunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TFYRouterSILFunction.swift; sourceTree = "<group>"; };
+		36EA1BAE262BBCEE0003E726 /* TFYRouterManager+OC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TFYRouterManager+OC.swift"; sourceTree = "<group>"; };
+		36EA1BAF262BBCEE0003E726 /* TFYRouterFindSymbol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TFYRouterFindSymbol.swift; sourceTree = "<group>"; };
+		36EA1BB0262BBCEE0003E726 /* TFYRouterLog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TFYRouterLog.swift; sourceTree = "<group>"; };
+		36EA1BB1262BBCEE0003E726 /* TFYRouterLock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TFYRouterLock.swift; sourceTree = "<group>"; };
+		36EA1BB2262BBCEE0003E726 /* TFYRouterFunction+OC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TFYRouterFunction+OC.swift"; sourceTree = "<group>"; };
+		36EA1BB3262BBCEE0003E726 /* TFYbasicItools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TFYbasicItools.swift; sourceTree = "<group>"; };
+		36EA1BB4262BBCEE0003E726 /* TFYMacros.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TFYMacros.swift; sourceTree = "<group>"; };
+		36EA1BB5262BBCEE0003E726 /* TFYRouterManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TFYRouterManager.swift; sourceTree = "<group>"; };
+		36EA1BB6262BBCEE0003E726 /* TFYRouterHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TFYRouterHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,9 +123,9 @@
 		36EA1A9A262AFC850003E726 /* TFYSwiftMessageRouter */ = {
 			isa = PBXGroup;
 			children = (
-				36EA1A9B262AFC850003E726 /* AppDelegate.swift */,
-				36EA1A9D262AFC850003E726 /* SceneDelegate.swift */,
-				36EA1A9F262AFC850003E726 /* ViewController.swift */,
+				36EA1AD1262AFD0D0003E726 /* AppDelegate */,
+				36EA1ACF262AFD0D0003E726 /* Class */,
+				36EA1BAC262BBCEE0003E726 /* TFYSwiftRouter */,
 				36EA1AA1262AFC850003E726 /* Main.storyboard */,
 				36EA1AA4262AFC860003E726 /* Assets.xcassets */,
 				36EA1AA6262AFC860003E726 /* LaunchScreen.storyboard */,
@@ -126,6 +150,42 @@
 				36EA1ABF262AFC860003E726 /* Info.plist */,
 			);
 			path = TFYSwiftMessageRouterUITests;
+			sourceTree = "<group>";
+		};
+		36EA1ACF262AFD0D0003E726 /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				36EA1AD0262AFD0D0003E726 /* ViewController.swift */,
+				36EA1B93262BB3A40003E726 /* RootViewController.swift */,
+				36EA1B98262BB3B70003E726 /* RootRouter.swift */,
+			);
+			path = Class;
+			sourceTree = "<group>";
+		};
+		36EA1AD1262AFD0D0003E726 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				36EA1AD2262AFD0D0003E726 /* AppDelegate.swift */,
+				36EA1AD3262AFD0D0003E726 /* SceneDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		36EA1BAC262BBCEE0003E726 /* TFYSwiftRouter */ = {
+			isa = PBXGroup;
+			children = (
+				36EA1BAD262BBCEE0003E726 /* TFYRouterSILFunction.swift */,
+				36EA1BAE262BBCEE0003E726 /* TFYRouterManager+OC.swift */,
+				36EA1BAF262BBCEE0003E726 /* TFYRouterFindSymbol.swift */,
+				36EA1BB0262BBCEE0003E726 /* TFYRouterLog.swift */,
+				36EA1BB1262BBCEE0003E726 /* TFYRouterLock.swift */,
+				36EA1BB2262BBCEE0003E726 /* TFYRouterFunction+OC.swift */,
+				36EA1BB3262BBCEE0003E726 /* TFYbasicItools.swift */,
+				36EA1BB4262BBCEE0003E726 /* TFYMacros.swift */,
+				36EA1BB5262BBCEE0003E726 /* TFYRouterManager.swift */,
+				36EA1BB6262BBCEE0003E726 /* TFYRouterHelper.swift */,
+			);
+			path = TFYSwiftRouter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,9 +318,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				36EA1AA0262AFC850003E726 /* ViewController.swift in Sources */,
-				36EA1A9C262AFC850003E726 /* AppDelegate.swift in Sources */,
-				36EA1A9E262AFC850003E726 /* SceneDelegate.swift in Sources */,
+				36EA1BBE262BBCEE0003E726 /* TFYMacros.swift in Sources */,
+				36EA1AD4262AFD0D0003E726 /* ViewController.swift in Sources */,
+				36EA1B99262BB3B70003E726 /* RootRouter.swift in Sources */,
+				36EA1AD5262AFD0D0003E726 /* AppDelegate.swift in Sources */,
+				36EA1BBB262BBCEE0003E726 /* TFYRouterLock.swift in Sources */,
+				36EA1BBC262BBCEE0003E726 /* TFYRouterFunction+OC.swift in Sources */,
+				36EA1BBA262BBCEE0003E726 /* TFYRouterLog.swift in Sources */,
+				36EA1AD6262AFD0D0003E726 /* SceneDelegate.swift in Sources */,
+				36EA1BC0262BBCEE0003E726 /* TFYRouterHelper.swift in Sources */,
+				36EA1BB8262BBCEE0003E726 /* TFYRouterManager+OC.swift in Sources */,
+				36EA1B94262BB3A40003E726 /* RootViewController.swift in Sources */,
+				36EA1BBF262BBCEE0003E726 /* TFYRouterManager.swift in Sources */,
+				36EA1BB7262BBCEE0003E726 /* TFYRouterSILFunction.swift in Sources */,
+				36EA1BBD262BBCEE0003E726 /* TFYbasicItools.swift in Sources */,
+				36EA1BB9262BBCEE0003E726 /* TFYRouterFindSymbol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -439,6 +511,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QH95759TSS;
 				INFOPLIST_FILE = TFYSwiftMessageRouter/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -458,6 +531,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QH95759TSS;
 				INFOPLIST_FILE = TFYSwiftMessageRouter/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
