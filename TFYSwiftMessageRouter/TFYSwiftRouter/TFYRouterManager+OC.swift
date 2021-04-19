@@ -6,7 +6,7 @@
 //
 
 import Foundation
-
+///fileprivate：只允许在定义实体的源文件中访问
 public extension TFYRouterManager {
     
     func ocRouteTo(_ router: String) -> TFYRouterDefaultOCFunction? {

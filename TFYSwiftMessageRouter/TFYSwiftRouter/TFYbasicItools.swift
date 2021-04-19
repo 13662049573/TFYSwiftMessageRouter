@@ -83,3 +83,48 @@ public struct TopbasicItools:TFYbasicItools {
 public struct RootbasicItools:TFYbasicItools {
     public static var TFYbasicItools:UIViewController?{UIViewController.rootViewController}
 }
+
+///多线程开发 – 异步
+public typealias Block = () -> Void
+
+public func async(_ task: @escaping Block) {
+    _async(task)
+}
+
+public func async(_ task: @escaping Block, _ mainTask: @escaping Block) {
+    _async(task, mainTask)
+}
+
+private func _async(_ task: @escaping Block,_ mainTask: Block? = nil) {
+    let item = DispatchWorkItem(block: task)
+    DispatchQueue.global().async(execute: item)
+    if let main = mainTask {
+        item.notify(queue: DispatchQueue.main, execute: main)
+    }
+}
+
+///多线程开发 – 延迟
+@discardableResult public func delay(_ seconds: Double,_ block: @escaping Block) -> DispatchWorkItem {
+    let item = DispatchWorkItem(block: block)
+    DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + seconds, execute: item)
+    return item
+}
+
+///多线程开发 – 异步延迟
+@discardableResult public func asyncDelay(_ seconds: Double, _ task: @escaping Block) -> DispatchWorkItem {
+    return _asyncDelay(seconds, task)
+}
+
+@discardableResult public func asyncDelay(_ seconds: Double, _ task: @escaping Block, _ mainTask: @escaping Block) -> DispatchWorkItem {
+    return _asyncDelay(seconds, task, mainTask)
+}
+
+private  func _asyncDelay(_ seconds: Double,_ task: @escaping Block, _ mainTask: Block? = nil) -> DispatchWorkItem {
+    let item = DispatchWorkItem(block: task)
+    DispatchQueue.global().asyncAfter(deadline: DispatchTime.now() + seconds, execute: item)
+    if let main = mainTask {
+        item.notify(queue: DispatchQueue.main, execute: main)
+    }
+    return item
+
+}

@@ -7,15 +7,18 @@
 
 import Foundation
 
+///单例 任何地方都可以访问 open：允许在定义实体的模块、其他模块中访问，允许其他模块进行继承、重写（open只能用在类、类成员上）
 open class TFYRouterManager {
     public static let `default` = TFYRouterManager()
-
+    ///internal 只允许在定义实体的模块中访问，不允许在其他模块中访问
     internal var lock = TFYRouterLock()
-    internal var cacheSymbols = [String: UnsafeRawPointer]()
+    internal var cacheSymbols = [String: UnsafeRawPointer]()///UnsafePointer<Pointee> 类似于 const Pointee *
     internal var defaultNotFoundHandler: ((_ router: String)->())?
 }
 
+///类的扩展 public：允许在定义实体的模块、其他模块中访问，不允许其他模块进行继承、重写
 public extension TFYRouterManager {
+    
     func registeredDefultNotFoundHandler(_ handler: @escaping (_ router: String)->()) {
         self.defaultNotFoundHandler = handler
     }

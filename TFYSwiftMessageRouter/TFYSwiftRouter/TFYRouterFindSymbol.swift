@@ -8,6 +8,17 @@
 import Foundation
 import MachO
 
+/**
+ n Swift中的模式有
+ 1.通配符模式（Wildcard Pattern）
+ 2 标识符模式（Identifier Pattern）
+ 3 值绑定模式（Value-Binding Pattern）
+ 4 元组模式（Tuple Pattern）
+ 5 枚举Case模式（Enumeration Case Pattern）
+ 6 可选模式（Optional Pattern）
+ 7 类型转换模式（Type-Casting Pattern）
+ 8 表达式模式（Expression Pattern）
+ */
 func TFYRouteFindSymbolAtModule(_ moduleName: String, symbol: String) -> UnsafeRawPointer? {
     for i in 0..<_dyld_image_count() {
         if String(cString: _dyld_get_image_name(i)).components(separatedBy: "/").last == moduleName {
@@ -20,8 +31,11 @@ func TFYRouteFindSymbolAtModule(_ moduleName: String, symbol: String) -> UnsafeR
     TFYRouterLog(router: symbol, message: "\(moduleName) Module Not Found")
     return nil
 }
-
-// O(_symbol.count) Tree
+///指针
+///UnsafePointer<Pointee> 类似于 const Pointee *
+///UnsafeMutablePointer<Pointee> 类似于 Pointee *
+///UnsafeRawPointer 类似于 const void *
+///UnsafeMutableRawPointer 类似于 void *
 private func TFYRouteFindExportedCSymbol(_ cSymbol: String, imageIndex: UInt32) -> UnsafeRawPointer? {
     if let handle = dlopen(_dyld_get_image_name(imageIndex), RTLD_NOW), let pointer = dlsym(handle, cSymbol) {
         return UnsafeRawPointer(pointer)
@@ -177,7 +191,7 @@ private func TFYRouteFindExportedSwiftSymbol(_ swiftSymbol: String, image: Unsaf
 
 
 
-// O(n)  list
+// O(n)  list 发布IPA将在SymbolTable删除一些Swift符号
 @available(*, deprecated, message: "Release IPA will Strip Some Swift Symbols at SymbolTable")
 func TFYRouteFindSymbolAtSymbolTable(_ symbol: String, image: UnsafePointer<mach_header>, imageSlide slide: Int) -> UnsafeRawPointer? {
     let linkeditName = SEG_LINKEDIT.data(using: String.Encoding.utf8)!.map({ $0 })

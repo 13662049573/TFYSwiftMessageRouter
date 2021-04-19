@@ -7,6 +7,7 @@
 
 import UIKit
 
+///被final修饰的方法、下标、属性，禁止被重写 被final修饰的类，禁止被继承
 class ViewController: UIViewController {
 
     override func viewDidLoad() {

@@ -19,6 +19,7 @@ class SpinLock {
 }
 
 class TFYRouterLock {
+    ///private：只允许在定义实体的封闭声明中访问
     private var value: Int32 = 0
     private static var PreQosClassKey: pthread_key_t = 0
 
