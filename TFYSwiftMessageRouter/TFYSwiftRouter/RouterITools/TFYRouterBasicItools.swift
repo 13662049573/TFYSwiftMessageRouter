@@ -1,8 +1,8 @@
 //
-//  TFYbasicItools.swift
+//  TFYRouterBasicItools.swift
 //  TFYSwiftMessageRouter
 //
-//  Created by 田风有 on 2021/4/17.
+//  Created by 田风有 on 2021/4/20.
 //
 
 import Foundation
@@ -56,19 +56,19 @@ extension UIViewController {
     }
 }
 
-public protocol TFYbasicItools {
-    static var TFYbasicItools:UIViewController?{get}
+public protocol TFYRouterBasicItools {
+    static var TFYRouterBasicItools:UIViewController?{get}
     static func push(_ viewController:UIViewController,animated:Bool)
     static func present(_ viewController:UIViewController,animated:Bool,completion:(()->Void)?)
 }
 
-extension TFYbasicItools {
+extension TFYRouterBasicItools {
     public static func push(_ viewController:UIViewController,animated:Bool) {
-        TFYbasicItools?.currentNavigationController?.pushViewController(viewController, animated: animated)
+        TFYRouterBasicItools?.currentNavigationController?.pushViewController(viewController, animated: animated)
     }
     
     public static func present(_ viewController:UIViewController,animated:Bool,completion:(()->Void)?) {
-        var presenter = TFYbasicItools
+        var presenter = TFYRouterBasicItools
         while let presented = presenter?.presentedViewController {
             presenter = presented
         }
@@ -76,55 +76,10 @@ extension TFYbasicItools {
     }
 }
 
-public struct TopbasicItools:TFYbasicItools {
-    public static var TFYbasicItools:UIViewController?{UIViewController.topViewController}
+public struct RouterTopbasicItools:TFYRouterBasicItools {
+    public static var TFYRouterBasicItools:UIViewController?{UIViewController.topViewController}
 }
 
-public struct RootbasicItools:TFYbasicItools {
-    public static var TFYbasicItools:UIViewController?{UIViewController.rootViewController}
-}
-
-///多线程开发 – 异步
-public typealias Block = () -> Void
-
-public func async(_ task: @escaping Block) {
-    _async(task)
-}
-
-public func async(_ task: @escaping Block, _ mainTask: @escaping Block) {
-    _async(task, mainTask)
-}
-
-private func _async(_ task: @escaping Block,_ mainTask: Block? = nil) {
-    let item = DispatchWorkItem(block: task)
-    DispatchQueue.global().async(execute: item)
-    if let main = mainTask {
-        item.notify(queue: DispatchQueue.main, execute: main)
-    }
-}
-
-///多线程开发 – 延迟
-@discardableResult public func delay(_ seconds: Double,_ block: @escaping Block) -> DispatchWorkItem {
-    let item = DispatchWorkItem(block: block)
-    DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + seconds, execute: item)
-    return item
-}
-
-///多线程开发 – 异步延迟
-@discardableResult public func asyncDelay(_ seconds: Double, _ task: @escaping Block) -> DispatchWorkItem {
-    return _asyncDelay(seconds, task)
-}
-
-@discardableResult public func asyncDelay(_ seconds: Double, _ task: @escaping Block, _ mainTask: @escaping Block) -> DispatchWorkItem {
-    return _asyncDelay(seconds, task, mainTask)
-}
-
-private  func _asyncDelay(_ seconds: Double,_ task: @escaping Block, _ mainTask: Block? = nil) -> DispatchWorkItem {
-    let item = DispatchWorkItem(block: task)
-    DispatchQueue.global().asyncAfter(deadline: DispatchTime.now() + seconds, execute: item)
-    if let main = mainTask {
-        item.notify(queue: DispatchQueue.main, execute: main)
-    }
-    return item
-
+public struct RouterRootbasicItools:TFYRouterBasicItools {
+    public static var TFYRouterBasicItools:UIViewController?{UIViewController.rootViewController}
 }

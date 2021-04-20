@@ -22,7 +22,7 @@ public func RootRouter(with params: [String: Any]) -> [String: Any]? {
     if let title = params["title"] as? String {
         loginController._title = title
     }
-    RootbasicItools.push(loginController, animated: true)
+    RouterRootbasicItools.push(loginController, animated: true)
     return nil
 }
 
@@ -80,13 +80,14 @@ public func LoginActionTest8(a: Int, b: String, c: BaseModel) {
 @_silgen_name("TFYSwiftMessageRouter.Test9")
 public func LoginActionTest9(a: Int, b: String, _ c: BaseModel) -> BaseModel {
     print("Hello, LoginActionTest9; inputValue =", a, b, c.name)
-    c.name = "New Name9"
+    c.name = "这是一个返回数据 9 "
     return c
 }
 
+@_silgen_name("TFYSwiftMessageRouter.Test10")
 public func LoginActionTest10(a: Int, _ b: String, _ c: BaseModel) -> (BaseModel, Double) {
     print("Hello, LoginActionTest10; inputValue =", a, b, c.name)
-    c.name = "New Name10"
+    c.name = "这是一个返回数据 10 "
     return (c, 10.1)
 }
 

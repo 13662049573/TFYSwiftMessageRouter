@@ -85,7 +85,7 @@ class ViewController: UIViewController {
             print(newModel.name, "\n")
         }
         
-        if let action10 = TFYRouterManager.default.routeTo("TFYSwiftMessageRouter.LoginActionTest10(a: Swift.Int, _: Swift.String, _: TFYSwiftMessageRouter.BaseModel) -> (TFYSwiftMessageRouter.BaseModel, Swift.Double)", routerSILFunctionType: (@convention(thin) (Int, String, BaseModel) -> (BaseModel, Double)).self) {
+        if let action10 = TFYRouterManager.default.routeTo("TFYSwiftMessageRouter.Test10", routerSILFunctionType: (@convention(thin) (Int, String, BaseModel) -> (BaseModel, Double)).self) {
             let result = action10(10, "Action10", BaseModel(_name: "Tanner.Jin"))
             let alert = UIAlertController(title: "结果", message: result.0.name, preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))

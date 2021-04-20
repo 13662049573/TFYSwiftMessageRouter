@@ -3,7 +3,7 @@ Pod::Spec.new do |spec|
 
   spec.name         = "TFYSwiftRouter"
 
-  spec.version      = "2.0.2"
+  spec.version      = "2.0.4"
 
   spec.summary      = "汇编代码的路由跳转，支持OC 于 Swift 各个界面跳转，方法跳转 数据传输,最低支持ios 13 Swift 5 "
 
@@ -21,7 +21,25 @@ Pod::Spec.new do |spec|
   spec.source       = { :git => "https://github.com/13662049573/TFYSwiftMessageRouter.git", :tag => spec.version }
 
 
-  spec.source_files  = "TFYSwiftMessageRouter/TFYSwiftRouter/**/*.{swift}"
+  spec.subspec 'RouterITools' do |ss|
+    ss.source_files  = "TFYSwiftMessageRouter/TFYSwiftRouter/RouterITools/*.{swift}"
+  end
+
+  spec.subspec 'RouterLog' do |ss|
+    ss.source_files  = "TFYSwiftMessageRouter/TFYSwiftRouter/RouterLog/*.{swift}"
+  end
+
+  spec.subspec 'RouterOC' do |ss|
+    ss.source_files  = "TFYSwiftMessageRouter/TFYSwiftRouter/RouterOC/*.{swift}"
+    ss.dependency "TFYSwiftRouter/RouterITools"
+    ss.dependency "TFYSwiftRouter/RouterLog"
+  end
+
+  spec.subspec 'RouterSwift' do |ss|
+    ss.source_files  = "TFYSwiftMessageRouter/TFYSwiftRouter/RouterSwift/TFYRouterManager.swift"
+    ss.dependency "TFYSwiftRouter/RouterITools"
+    ss.dependency "TFYSwiftRouter/RouterLog"
+   end
 
   spec.platform     = :ios, "13.0"
 

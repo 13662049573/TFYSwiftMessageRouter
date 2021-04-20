@@ -261,7 +261,6 @@ func TFYRouteFindSymbolAtSymbolTable(_ symbol: String, image: UnsafePointer<mach
             }
         }
     }
-    
     TFYRouterLog(router: symbol, message: "Symbol Table Not Found \(symbol)")
     return nil
 }

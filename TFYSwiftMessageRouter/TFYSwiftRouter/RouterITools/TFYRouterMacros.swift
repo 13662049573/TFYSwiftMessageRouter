@@ -1,8 +1,8 @@
 //
-//  TFYMacros.swift
+//  TFYRouterMacros.swift
 //  TFYSwiftMessageRouter
 //
-//  Created by 田风有 on 2021/4/17.
+//  Created by 田风有 on 2021/4/20.
 //
 
 import UIKit
@@ -47,3 +47,4 @@ func Log<T>(_ message : T, fileName : String = #file, lineNum : Int = #line) {
         print("\(file):[\(lineNum)] \(message)")
     #endif
 }
+
