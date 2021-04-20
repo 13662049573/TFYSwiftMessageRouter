@@ -15,8 +15,8 @@
 		3671C3D7262F0DC500A1F1AC /* TFYRouterFindSymbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3671C3D0262F0DC500A1F1AC /* TFYRouterFindSymbol.swift */; };
 		3671C3D8262F0DC500A1F1AC /* TFYRouterMacros.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3671C3D1262F0DC500A1F1AC /* TFYRouterMacros.swift */; };
 		3671C3D9262F0DC500A1F1AC /* TFYRouterHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3671C3D2262F0DC500A1F1AC /* TFYRouterHelper.swift */; };
-		3671C3DA262F0DC500A1F1AC /* TFYRouterLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3671C3D4262F0DC500A1F1AC /* TFYRouterLog.swift */; };
-		3671C3DF262F0E4100A1F1AC /* TFYRouterLock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3671C3DE262F0E4100A1F1AC /* TFYRouterLock.swift */; };
+		3671C3E4262F140F00A1F1AC /* TFYRouterLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3671C3E3262F140F00A1F1AC /* TFYRouterLog.swift */; };
+		3671C3EA262F146D00A1F1AC /* TFYRouterLock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3671C3E9262F146D00A1F1AC /* TFYRouterLock.swift */; };
 		36D5B1CB262C2A74001CDFB3 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D5B1CA262C2A74001CDFB3 /* BaseModel.swift */; };
 		36EA1AA3262AFC850003E726 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36EA1AA1262AFC850003E726 /* Main.storyboard */; };
 		36EA1AA5262AFC860003E726 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36EA1AA4262AFC860003E726 /* Assets.xcassets */; };
@@ -56,8 +56,8 @@
 		3671C3D0262F0DC500A1F1AC /* TFYRouterFindSymbol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TFYRouterFindSymbol.swift; sourceTree = "<group>"; };
 		3671C3D1262F0DC500A1F1AC /* TFYRouterMacros.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TFYRouterMacros.swift; sourceTree = "<group>"; };
 		3671C3D2262F0DC500A1F1AC /* TFYRouterHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TFYRouterHelper.swift; sourceTree = "<group>"; };
-		3671C3D4262F0DC500A1F1AC /* TFYRouterLog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TFYRouterLog.swift; sourceTree = "<group>"; };
-		3671C3DE262F0E4100A1F1AC /* TFYRouterLock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TFYRouterLock.swift; sourceTree = "<group>"; };
+		3671C3E3262F140F00A1F1AC /* TFYRouterLog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TFYRouterLog.swift; sourceTree = "<group>"; };
+		3671C3E9262F146D00A1F1AC /* TFYRouterLock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TFYRouterLock.swift; sourceTree = "<group>"; };
 		36D5B1CA262C2A74001CDFB3 /* BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
 		36EA1A98262AFC850003E726 /* TFYSwiftMessageRouter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TFYSwiftMessageRouter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		36EA1AA2262AFC850003E726 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -122,6 +122,7 @@
 		3671C3CD262F0DC500A1F1AC /* RouterITools */ = {
 			isa = PBXGroup;
 			children = (
+				3671C3E3262F140F00A1F1AC /* TFYRouterLog.swift */,
 				3671C3CE262F0DC500A1F1AC /* TFYRouterSILFunction.swift */,
 				3671C3CF262F0DC500A1F1AC /* TFYRouterBasicItools.swift */,
 				3671C3D0262F0DC500A1F1AC /* TFYRouterFindSymbol.swift */,
@@ -131,13 +132,12 @@
 			path = RouterITools;
 			sourceTree = "<group>";
 		};
-		3671C3D3262F0DC500A1F1AC /* RouterLog */ = {
+		3671C3E8262F146D00A1F1AC /* RouterLock */ = {
 			isa = PBXGroup;
 			children = (
-				3671C3DE262F0E4100A1F1AC /* TFYRouterLock.swift */,
-				3671C3D4262F0DC500A1F1AC /* TFYRouterLog.swift */,
+				3671C3E9262F146D00A1F1AC /* TFYRouterLock.swift */,
 			);
-			path = RouterLog;
+			path = RouterLock;
 			sourceTree = "<group>";
 		};
 		36EA1A8F262AFC850003E726 = {
@@ -215,8 +215,8 @@
 		36EA1BAC262BBCEE0003E726 /* TFYSwiftRouter */ = {
 			isa = PBXGroup;
 			children = (
+				3671C3E8262F146D00A1F1AC /* RouterLock */,
 				3671C3CD262F0DC500A1F1AC /* RouterITools */,
-				3671C3D3262F0DC500A1F1AC /* RouterLog */,
 				3671C3A4262F0B8600A1F1AC /* RouterOC */,
 				3671C3AB262F0B8700A1F1AC /* RouterSwift */,
 			);
@@ -356,7 +356,7 @@
 				36EA1AD4262AFD0D0003E726 /* ViewController.swift in Sources */,
 				3671C3D6262F0DC500A1F1AC /* TFYRouterBasicItools.swift in Sources */,
 				36EA1B99262BB3B70003E726 /* RootRouter.swift in Sources */,
-				3671C3DA262F0DC500A1F1AC /* TFYRouterLog.swift in Sources */,
+				3671C3E4262F140F00A1F1AC /* TFYRouterLog.swift in Sources */,
 				36EA1AD5262AFD0D0003E726 /* AppDelegate.swift in Sources */,
 				3671C3B2262F0B8700A1F1AC /* TFYRouterFunction+OC.swift in Sources */,
 				36D5B1CB262C2A74001CDFB3 /* BaseModel.swift in Sources */,
@@ -364,7 +364,7 @@
 				3671C3D9262F0DC500A1F1AC /* TFYRouterHelper.swift in Sources */,
 				3671C3D5262F0DC500A1F1AC /* TFYRouterSILFunction.swift in Sources */,
 				3671C3D8262F0DC500A1F1AC /* TFYRouterMacros.swift in Sources */,
-				3671C3DF262F0E4100A1F1AC /* TFYRouterLock.swift in Sources */,
+				3671C3EA262F146D00A1F1AC /* TFYRouterLock.swift in Sources */,
 				36EA1AD6262AFD0D0003E726 /* SceneDelegate.swift in Sources */,
 				36EA1B94262BB3A40003E726 /* RootViewController.swift in Sources */,
 				3671C3B1262F0B8700A1F1AC /* TFYRouterManager+OC.swift in Sources */,

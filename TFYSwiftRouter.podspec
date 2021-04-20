@@ -23,17 +23,17 @@ Pod::Spec.new do |spec|
 
   spec.subspec 'RouterITools' do |ss|
     ss.source_files  = "TFYSwiftMessageRouter/TFYSwiftRouter/RouterITools/*.{swift}"
-    ss.dependency "TFYSwiftRouter/RouterLog"
+    ss.dependency "TFYSwiftRouter/RouterLock"
   end
 
-  spec.subspec 'RouterLog' do |ss|
-    ss.source_files  = "TFYSwiftMessageRouter/TFYSwiftRouter/RouterLog/*.{swift}"
+  spec.subspec 'RouterLock' do |ss|
+    ss.source_files  = "TFYSwiftMessageRouter/TFYSwiftRouter/RouterLock/*.{swift}"
   end
 
   spec.subspec 'RouterOC' do |ss|
     ss.source_files  = "TFYSwiftMessageRouter/TFYSwiftRouter/RouterOC/*.{swift}"
     ss.dependency "TFYSwiftRouter/RouterITools"
-    ss.dependency "TFYSwiftRouter/RouterLog"
+    ss.dependency "TFYSwiftRouter/RouterLock"
     ss.dependency "TFYSwiftRouter/RouterSwift"
   end
 
