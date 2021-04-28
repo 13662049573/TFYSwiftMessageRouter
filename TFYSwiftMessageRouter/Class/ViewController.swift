@@ -30,7 +30,6 @@ class ViewController: UIViewController {
         button.addTarget(self, action: #selector(Rootpush), for: .touchUpInside)
         view.addSubview(button)
         
-        
         let button2 = UIButton(frame: CGRect(x:0, y:300, width:kScreenW, height: 60))
         button2.setTitle("action", for: .normal)
         button2.setTitleColor(.systemBlue, for: .normal)
