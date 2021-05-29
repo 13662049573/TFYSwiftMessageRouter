@@ -7,13 +7,17 @@
 
 import UIKit
 
-public typealias RouteParameter = [String: Any?]
+private typealias RouteParameter = [String: Any?]
+
+private typealias completion = (_ name:String) -> Void
 
 class RootViewController: UIViewController {
 
     var _title: String?
     
-    var completion: ((String) -> Void)?
+    var dict: [String : Any] = [:]
+
+    private var completion: completion?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,7 +34,7 @@ class RootViewController: UIViewController {
     
     @objc func pop() {
         self.navigationController?.popViewController(animated: true)
-        completion?("Callback from B!")
+        dict = ["name":"返回数据"]
     }
 
 }

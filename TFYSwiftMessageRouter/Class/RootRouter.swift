@@ -16,12 +16,14 @@ import UIKit
  （如test函数，编译后的符号名为_test）
  所以C函数具备全局唯一性。正是利用这一特性，@_silgen_name可自动搜索和调用c函数
  */
+
+
+
 @_silgen_name("TFYSwiftMessageRouter.root")
-public func RootRouter(with params: [String: Any]) -> [String: Any]? {
+public func RootRouter(with params: Any?) -> Any? {
     let loginController = RootViewController()
-    if let title = params["title"] as? String {
-        loginController._title = title
-    }
+    let title: String = (params as! BaseModel).title
+    loginController._title = title
     RouterRootbasicItools.push(loginController, animated: true)
     return nil
 }

@@ -73,4 +73,12 @@ public extension TFYRouterManager {
         handler == nil ? defaultNotFoundHandler?(router):handler?()
         return nil
     }
+    
+    func routeTo(router: String, parame: Any , json: @escaping (Any?) -> Any?) {
+        if let data = routeAndHandleNotFound(router, routerSILFunctionType: (@convention(thin) (Any?)->Any?).self) {
+            let model = data(parame)
+            json(model)
+        }
+    }
+
 }

@@ -39,7 +39,12 @@ class ViewController: UIViewController {
     }
     
     @objc func Rootpush() {
-        TFYRouterManager.default.routeTo("TFYSwiftMessageRouter.root")?(title:"测试数据")
+        let model = BaseModel(_name: "这是一条测试数据", _title: "我是个自定义标题")
+       TFYRouterManager.default.routeTo(router: "TFYSwiftMessageRouter.root", parame: model) { model in
+
+            Log(model)
+        }
+        
     }
     
     @objc func action() {
@@ -76,16 +81,16 @@ class ViewController: UIViewController {
         }
         
         if let action8 = TFYRouterManager.default.routeTo("TFYSwiftMessageRouter.LoginActionTest8(a: Swift.Int, b: Swift.String, c: TFYSwiftMessageRouter.BaseModel) -> ()", routerSILFunctionType: (@convention(thin) (Int, String, BaseModel)->()).self) {
-            action8(8, "Action8", BaseModel(_name: "Tanner.Jin"))
+            action8(8, "Action8", BaseModel(_name: "Tanner.Jin",_title: ""))
         }
         
         if let action9 = TFYRouterManager.default.routeTo("TFYSwiftMessageRouter.Test9", routerSILFunctionType: (@convention(thin) (Int, String, BaseModel)->BaseModel).self) {
-            let newModel = action9(9, "Action9", BaseModel(_name: "Tanner.Jin"))
+            let newModel = action9(9, "Action9", BaseModel(_name: "Tanner.Jin",_title: ""))
             print(newModel.name, "\n")
         }
         
         if let action10 = TFYRouterManager.default.routeTo("TFYSwiftMessageRouter.Test10", routerSILFunctionType: (@convention(thin) (Int, String, BaseModel) -> (BaseModel, Double)).self) {
-            let result = action10(10, "Action10", BaseModel(_name: "Tanner.Jin"))
+            let result = action10(10, "Action10", BaseModel(_name: "Tanner.Jin",_title: ""))
             let alert = UIAlertController(title: "结果", message: result.0.name, preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
             UIViewController.topViewController?.present(alert, animated: true) {
