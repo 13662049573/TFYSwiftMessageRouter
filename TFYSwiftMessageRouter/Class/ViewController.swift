@@ -36,16 +36,29 @@ class ViewController: UIViewController {
         button2.backgroundColor = .red
         button2.addTarget(self, action: #selector(action), for: .touchUpInside)
         view.addSubview(button2)
+        
+        let button3 = UIButton(frame: CGRect(x:0, y:380, width:kScreenW, height: 60))
+        button3.setTitle("返回VC", for: .normal)
+        button3.setTitleColor(.systemBlue, for: .normal)
+        button3.backgroundColor = .red
+        button3.addTarget(self, action: #selector(twoVC), for: .touchUpInside)
+        view.addSubview(button3)
     }
     
     @objc func Rootpush() {
         let model = BaseModel(_name: "这是一条测试数据", _title: "我是个自定义标题")
-       TFYRouterManager.default.routeTo(router: "TFYSwiftMessageRouter.root", parame: model) { model in
+       TFYRouterManager.default.routeTo(router: "TFYSwiftMessageRouter.root", parame: model) { data in
 
-            Log(model)
-        }
+        Log(data)
         
+        }
     }
+    
+    @objc func twoVC() {
+        let vcTwo = TFYRouterManager.default.routeToVC("TFYSwiftMessageRouter.two", parame: ["title":"按客户看看"]) as! UIViewController
+        RouterRootbasicItools.push(vcTwo, animated: true)
+    }
+    
     
     @objc func action() {
         

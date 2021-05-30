@@ -17,6 +17,7 @@
 		3671C3F3262F166400A1F1AC /* TFYRouterSILFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3671C3EF262F166400A1F1AC /* TFYRouterSILFunction.swift */; };
 		3671C3F4262F166400A1F1AC /* TFYRouterFindSymbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3671C3F0262F166400A1F1AC /* TFYRouterFindSymbol.swift */; };
 		3671C3F5262F166400A1F1AC /* TFYRouterLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3671C3F1262F166400A1F1AC /* TFYRouterLog.swift */; };
+		367C0FE5266327C600BAB242 /* RootTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367C0FE4266327C600BAB242 /* RootTwoViewController.swift */; };
 		36D5B1CB262C2A74001CDFB3 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D5B1CA262C2A74001CDFB3 /* BaseModel.swift */; };
 		36EA1AA3262AFC850003E726 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36EA1AA1262AFC850003E726 /* Main.storyboard */; };
 		36EA1AA5262AFC860003E726 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36EA1AA4262AFC860003E726 /* Assets.xcassets */; };
@@ -58,6 +59,7 @@
 		3671C3EF262F166400A1F1AC /* TFYRouterSILFunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TFYRouterSILFunction.swift; sourceTree = "<group>"; };
 		3671C3F0262F166400A1F1AC /* TFYRouterFindSymbol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TFYRouterFindSymbol.swift; sourceTree = "<group>"; };
 		3671C3F1262F166400A1F1AC /* TFYRouterLog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TFYRouterLog.swift; sourceTree = "<group>"; };
+		367C0FE4266327C600BAB242 /* RootTwoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTwoViewController.swift; sourceTree = "<group>"; };
 		36D5B1CA262C2A74001CDFB3 /* BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
 		36EA1A98262AFC850003E726 /* TFYSwiftMessageRouter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TFYSwiftMessageRouter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		36EA1AA2262AFC850003E726 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -199,6 +201,7 @@
 				36EA1B93262BB3A40003E726 /* RootViewController.swift */,
 				36EA1B98262BB3B70003E726 /* RootRouter.swift */,
 				36D5B1CA262C2A74001CDFB3 /* BaseModel.swift */,
+				367C0FE4266327C600BAB242 /* RootTwoViewController.swift */,
 			);
 			path = Class;
 			sourceTree = "<group>";
@@ -353,6 +356,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				367C0FE5266327C600BAB242 /* RootTwoViewController.swift in Sources */,
 				36EA1AD4262AFD0D0003E726 /* ViewController.swift in Sources */,
 				3671C3D6262F0DC500A1F1AC /* TFYRouterBasicItools.swift in Sources */,
 				3671C3F2262F166400A1F1AC /* TFYRouterHelper.swift in Sources */,

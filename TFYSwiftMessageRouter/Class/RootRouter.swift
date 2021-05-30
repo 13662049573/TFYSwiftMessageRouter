@@ -40,6 +40,13 @@ public func viewRouter(with params: [String: Any]) -> [String: Any]? {
     return nil
 }
 
+@_silgen_name("TFYSwiftMessageRouter.two")
+public func twoRouter(parame: [String: Any]) -> AnyObject? {
+    let twoVC = RootTwoViewController()
+    return twoVC
+}
+
+
 public func loginActionTestDefault(_ params: [String: Any]) -> [String: Any]? {
     Log("Hello, loginActionTestDefault;\(params)")
     return nil

@@ -80,5 +80,14 @@ public extension TFYRouterManager {
             json(model)
         }
     }
-
+    
+    @discardableResult
+    func routeToVC(_ router: String, parame: [String: Any]?) -> AnyObject? {
+        guard let vc = routeTo(router,routerSILFunctionType: (@convention(thin) ([String: Any]?)->AnyObject?).self) else {
+            return router as AnyObject
+        }
+        let dataVC = vc(parame)
+        return dataVC as AnyObject
+    }
+    
 }
