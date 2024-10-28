@@ -3,12 +3,12 @@ Pod::Spec.new do |spec|
 
   spec.name         = "TFYSwiftRouter"
 
-  spec.version      = "2.1.6"
+  spec.version      = "2.1.7"
 
-  spec.summary      = "汇编代码的路由跳转，支持OC 于 Swift 各个界面跳转，方法跳转 数据传输,最低支持ios 12 Swift 5 "
+  spec.summary      = "汇编代码的路由跳转，支持OC 于 Swift 各个界面跳转，方法跳转 数据传输,最低支持ios 14 Swift 5 "
 
   spec.description  = <<-DESC
-  汇编代码的路由跳转，支持OC 于 Swift 各个界面跳转，方法跳转 数据传输,最低支持ios 12 Swift 5 
+  汇编代码的路由跳转，支持OC 于 Swift 各个界面跳转，方法跳转 数据传输,最低支持ios 14 Swift 5 
                    DESC
 
   spec.homepage     = "https://github.com/13662049573/TFYSwiftMessageRouter"
@@ -40,7 +40,7 @@ Pod::Spec.new do |spec|
     ss.dependency "TFYSwiftRouter/RouterLock"
   end
 
-  spec.platform     = :ios, "12.0"
+  spec.platform     = :ios, "14.0"
 
   spec.swift_version = '5.0'
 
